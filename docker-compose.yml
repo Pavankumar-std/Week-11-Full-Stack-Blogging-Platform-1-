@@ -1,0 +1,12 @@
+# Optional local MongoDB service. To use it, install Docker Desktop and run:
+# docker compose up -d
+services:
+  mongodb:
+    image: mongo:7
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - week11_mongo_data:/data/db
+volumes:
+  week11_mongo_data:
